@@ -21,7 +21,7 @@ var commentRoutes	=require("./routes/comments"),
 //	common config.
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb+srv://cbhanu:Wam&$u4330@cluster0-aawee.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("*************************************", {
 	useNewUrlParser: true
 });
 app.use(express.static(__dirname + "/public")); //linking css
@@ -49,7 +49,7 @@ app.use((req, res, next)=>{
 	next();
 });
 
-//	using ROUTES
+//importing ROUTES
 app.use(indexRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
