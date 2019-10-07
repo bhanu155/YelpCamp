@@ -21,8 +21,9 @@ var commentRoutes	=require("./routes/comments"),
 //	common config.
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb+srv://cbhanu:Wam&$u4330@cluster0-aawee.mongodb.net/?retryWrites=true&w=majority", {
-	useNewUrlParser: true
+mongoose.connect("*************************************", {
+	useNewUrlParser: true,
+	useFindAndModify:false
 });
 app.use(express.static(__dirname + "/public")); //linking css
 app.use(methodOverride("_method"));
